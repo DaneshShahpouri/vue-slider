@@ -30,6 +30,7 @@
     bottom: 20px;
     text-align: right;
     color: white;
+    text-shadow: 0px 0px 4px black;
 }
 
 .thumbs {
@@ -42,6 +43,13 @@
 .thumb {
     height: calc((300px) / 5);
     opacity: 0.5;
+
+    cursor: pointer;
+}
+
+/* Hover */
+.thumb:hover{
+    opacity: 0.7
 }
 
 .thumb img {

@@ -28,10 +28,10 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
-                    <div class="next"></div>
+                    <div class="prev" @click="prevThumb"></div>
+                    <div class="next" @click="nextThumb"></div>
 
-                    <div v-for="(image, index) in slides" @click ="activeThumbnail(index)" @mouseover="clearAutoPlay()" @mouseleave="autoPlay" class="thumb active">
+                    <div v-for="(image, index) in slides" @click ="activeThumbnail(index)" @mouseover="clearAutoPlay()" @mouseleave="autoPlay" class="thumb" :class="index==this.imgIndex ? 'active' : ''">
                         <img :src="image.image" alt="Svezia" />
                     </div>
 

@@ -44,6 +44,21 @@ createApp({
 
     methods:{
 
+        prevThumb(){
+            this.imgIndex--;
+            if(this.imgIndex < 0){
+                this.imgIndex = this.slides.length-1
+            }
+           
+        },
+        
+        nextThumb(){
+            this.imgIndex++;
+            if(this.imgIndex > this.slides.length-1){
+                this.imgIndex = 0
+            }
+        },
+        
         activeThumbnail(index){
             this.imgIndex  = index;
         },
@@ -59,7 +74,7 @@ createApp({
                         object.imgIndex = 0;
                     }
                 },
-            2000)
+            4000)
         },
 
         clearAutoPlay(){
